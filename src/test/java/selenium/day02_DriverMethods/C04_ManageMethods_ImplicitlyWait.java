@@ -67,7 +67,7 @@ public class C04_ManageMethods_ImplicitlyWait {
             System.out.println("TEST FAILED");
         }
 
-        //sayfayı kapatınız
+        //sayfayı kapatınız sonra
         driver.close();
 
         /*
