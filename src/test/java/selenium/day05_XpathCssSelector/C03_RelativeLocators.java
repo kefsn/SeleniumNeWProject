@@ -39,7 +39,7 @@ public class C03_RelativeLocators {
         WebElement aramaKutusu = driver.findElement(By.xpath("//input[@id = 'twotabsearchtextbox']"));
         aramaKutusu.sendKeys("city bike" + Keys.ENTER);
 
-        //Relative Locator kullanarak Hybrid Bikes üstündeki Road Bikes'a tıklayalım
+        //Relative Locator kullanarak Hybrid Bikes altındaki Road Bikes'a tıklayalım
         WebElement hybridBikes = driver.findElement(By.xpath("//span[text() = 'hybrid bike']"));
 
         WebElement roadBikes = driver.findElement(RelativeLocator.with(By.tagName("span")).below(hybridBikes));
