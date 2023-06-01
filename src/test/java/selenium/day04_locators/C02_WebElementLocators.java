@@ -42,6 +42,10 @@ public class C02_WebElementLocators {
         List<WebElement> sonuclar = driver.findElements(By.className("s-image"));
         WebElement ilkUrun = sonuclar.get(0);//Bu şekilde ilk elemanı almış olduk.
 
+        //Sayfadaki 12. elementi list kullanmadan xpath'in index özelliğini kullanarak locate aldık
+        WebElement onikinciElement = driver.findElement(By.xpath("(//*[@class='sg-col-inner'])[12]"));
+        System.out.println(onikinciElement.getText());
+
 
 
         // ilk ürünün, görünür olup olmadıgını true, false seklinde yazdırın
@@ -55,6 +59,18 @@ public class C02_WebElementLocators {
 
         // ilk urune tıklayın
         ilkUrun.click();
+
+
+        //Relative Xpath syntax -->  //tagname[@attributeName='atributeValue']
+        //input[@type='text']
+        //                            (//input[@type='text'])[1]
+        //                            //*[@type='text']
+    /*
+        Aldığımız xpath unique olmadığı zaman xpath'imizi parantez içine alarak index belirtebiliriz.
+    Böylelikle webelementleri Liste atıp istediğimiz elementi almakla uğraşmayız.
+    Xpath'in değişik kullanma yolları vardır.
+     */
+
 
         // sayfayı kapatın
         driver.close();
